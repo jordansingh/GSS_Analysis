@@ -1,4 +1,4 @@
-GSS\ Analysis\ 2018
+GSS Analysis 2018
 ================
 Jordan Singh
 3/6/2021
