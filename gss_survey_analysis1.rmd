@@ -1,5 +1,14 @@
-GSS Analysis 2018
-================
+---
+title: "gss_survey_analysis1"
+author: "Jordan Singh"
+date: "3/6/2021"
+output: md_document:
+  variant:
+    markdown_github
+---
+
+#GSS Analysis 2018
+
 
 This project will serve to showcase a number of data and survey analysis
 techniques to explore the data from the 2018 General Social Survey.
@@ -28,7 +37,7 @@ setwd("C:/Users/jorda/OneDrive/Desktop/Data Projects/Survey Analysis")
 data <- read_excel("gss2018.XLSX")
 ```
 
-Now let’s take a look at some of the variables.
+Now let's take a look at some of the variables.
 
 ``` {r}
 describe(data$POLVIEWS) #descriptive statistics
@@ -45,12 +54,12 @@ In this case *POLVIEWS* breaks down as follows:
 5)  Slightly conservative
 6)  Conservative
 7)  Extremely conservative
-8)  Don’t know
+8)  Don't know
 9)  No answer
 
 As we can see the mean response here is 4.23 which would be inbetween
 moderate and slightly conservative. However, since all the values are
-numeric, 8 and 9, corresponding to “Don’t know” and “No answer”
+numeric, 8 and 9, corresponding to "Don't know" and "No answer"
 respectively, throw off the meaning of the descriptive statistics. For
 the data set, we have *n = 2,348*, and the extra values in this case
 only account for 101 entries, so taking them out would still leave us
@@ -103,9 +112,9 @@ variable. The response values breakdown as follows:
 25) $150,000 to 169,999
 26) $170,000 or over  
 27) Refused
-28) Don’t know
+28) Don't know
 
-<!-- end list -->
+
 
 ``` {r}
 table(data_polviews$INCOME16)
@@ -116,4 +125,5 @@ data_income <- filter(data_polviews, INCOME16 < 27)
 
 plot1 <- ggplot(data_income, aes(factor(POLVIEWS), INCOME16)) +
   geom_boxplot(aes(fill = factor(POLVIEWS)))
+plot1
 ```
