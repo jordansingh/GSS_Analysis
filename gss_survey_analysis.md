@@ -1,9 +1,5 @@
 GSS Analysis 2018
 ================
-Jordan Singh
-3/6/2021
-
-# GSS 2018 Analysis
 
 This project will serve to showcase a number of data and survey analysis
 techniques to explore the data from the 2018 General Social Survey.
